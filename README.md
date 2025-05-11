@@ -27,6 +27,13 @@ $ npm install
 $ npm start
 ```
 
+##If it fails, start like this
+
+```
+$ set NODE_OPTIONS=--openssl-legacy-provider
+$ npm start
+```
+
 ### 5. Create Admin User
 
 - Run this on chrome: http://localhost:5000/api/users/createadmin
