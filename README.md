@@ -27,7 +27,7 @@ $ npm install
 $ npm start
 ```
 
-##If it fails, start like this
+Note: If it fails, start like this
 
 ```
 $ set NODE_OPTIONS=--openssl-legacy-provider
