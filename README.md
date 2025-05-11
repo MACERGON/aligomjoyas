@@ -3,7 +3,7 @@
 ### 1. Clone repo
 
 ```
-$ git clone git@github.com:basir/node-react-ecommerce.git
+$ git clone git@https://github.com/MACERGON/aligomjoyas.git
 $ cd node-react-ecommerce
 ```
 
