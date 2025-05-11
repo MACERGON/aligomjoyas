@@ -40,7 +40,7 @@ function HomeScreen(props) {
               name="searchKeyword"
               onChange={(e) => setSearchKeyword(e.target.value)}
             />
-            <button type="submit">Search</button>
+            <button type="submit">Buscar</button>
           </form>
         </li>
         <li>
