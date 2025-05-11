@@ -29,7 +29,7 @@ function SigninScreen(props) {
     <form onSubmit={submitHandler} >
       <ul className="form-container">
         <li>
-          <h2>Sign-In</h2>
+          <h2>Iniciar sesión</h2>
         </li>
         <li>
           {loading && <div>Loading...</div>}
@@ -43,7 +43,7 @@ function SigninScreen(props) {
           </input>
         </li>
         <li>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Contraseña</label>
           <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
           </input>
         </li>
@@ -51,10 +51,10 @@ function SigninScreen(props) {
           <button type="submit" className="button primary">Signin</button>
         </li>
         <li>
-          New to amazona?
+          Nuevo a Aligom?
         </li>
         <li>
-          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create your amazona account</Link>
+          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create tu cuenta Aligom</Link>
         </li>
       </ul>
     </form>

@@ -30,11 +30,11 @@ function App() {
       <div className="grid-container">
         <header className="header">
           <div className="brand">
-            <button onClick={openMenu}>&#9776;</button>
+
             <Link to="/">Aligom</Link>
           </div>
           <div className="header-links">
-            <a href="cart.html">Cart</a>
+            <a href="cart.html">Carrito</a>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : (
@@ -45,8 +45,8 @@ function App() {
                 <a href="#">Admin</a>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/orders">Orders</Link>
-                    <Link to="/products">Products</Link>
+                    <Link to="/orders">Ordenes</Link>
+                    <Link to="/products">Productos</Link>
                   </li>
                 </ul>
               </div>

@@ -39,7 +39,7 @@ function PaymentScreen(props) {
 
             <li>
               <button type="submit" className="button primary">
-                Continue
+                Continuar
               </button>
             </li>
           </ul>

@@ -43,9 +43,9 @@ function OrderScreen(props) {
             </div>
           </div>
           <div>
-            <h3>Payment</h3>
+            <h3>Pago</h3>
             <div>
-              Payment Method: {order.payment.paymentMethod}
+              Método de Pago: {order.payment.paymentMethod}
             </div>
             <div>
               {order.isPaid ? "Paid at " + order.paidAt : "Not Paid."}
@@ -55,16 +55,16 @@ function OrderScreen(props) {
             <ul className="cart-list-container">
               <li>
                 <h3>
-                  Shopping Cart
+                  Carrito
           </h3>
                 <div>
-                  Price
+                  Precio
           </div>
               </li>
               {
                 order.orderItems.length === 0 ?
                   <div>
-                    Cart is empty
+                    El carrito esta vacío
           </div>
                   :
                   order.orderItems.map(item =>
@@ -80,7 +80,7 @@ function OrderScreen(props) {
 
                         </div>
                         <div>
-                          Qty: {item.qty}
+                          Cantidad: {item.qty}
                         </div>
                       </div>
                       <div className="cart-price">
@@ -97,7 +97,7 @@ function OrderScreen(props) {
         <div className="placeorder-action">
           <ul>
             <li className="placeorder-actions-payment">
-              {loadingPay && <div>Finishing Payment...</div>}
+              {loadingPay && <div>Completando pago...</div>}
               {!order.isPaid &&
                 <PaypalButton
                   amount={order.totalPrice}
@@ -105,22 +105,22 @@ function OrderScreen(props) {
               }
             </li>
             <li>
-              <h3>Order Summary</h3>
+              <h3>Resumen de orden</h3>
             </li>
             <li>
               <div>Items</div>
               <div>${order.itemsPrice}</div>
             </li>
             <li>
-              <div>Shipping</div>
+              <div>Envío</div>
               <div>${order.shippingPrice}</div>
             </li>
             <li>
-              <div>Tax</div>
+              <div>Impuesto</div>
               <div>${order.taxPrice}</div>
             </li>
             <li>
-              <div>Order Total</div>
+              <div>Total de la orden</div>
               <div>${order.totalPrice}</div>
             </li>
           </ul>

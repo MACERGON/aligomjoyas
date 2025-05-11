@@ -47,13 +47,13 @@ function ProfileScreen(props) {
               <h2>User Profile</h2>
             </li>
             <li>
-              {loading && <div>Loading...</div>}
+              {loading && <div>Cargando...</div>}
               {error && <div>{error}</div>}
-              {success && <div>Profile Saved Successfully.</div>}
+              {success && <div>Perfil guardado.</div>}
             </li>
             <li>
               <label htmlFor="name">
-                Name
+                Nombre
           </label>
               <input value={name} type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
               </input>
@@ -66,7 +66,7 @@ function ProfileScreen(props) {
               </input>
             </li>
             <li>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Contraseña</label>
               <input value={password} type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
               </input>
             </li>
@@ -84,7 +84,7 @@ function ProfileScreen(props) {
     </div>
     <div className="profile-orders content-margined">
       {
-        loadingOrders ? <div>Loading...</div> :
+        loadingOrders ? <div>Cargando...</div> :
           errorOrders ? <div>{errorOrders} </div> :
             <table className="table">
               <thead>

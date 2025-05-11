@@ -50,7 +50,7 @@ function ProductScreen(props) {
         <Link to="/">Back to result</Link>
       </div>
       {loading ? (
-        <div>Loading...</div>
+        <div>Cargando...</div>
       ) : error ? (
         <div>{error} </div>
       ) : (
@@ -73,23 +73,23 @@ function ProductScreen(props) {
                   </a>
                 </li>
                 <li>
-                  Price: <b>${product.price}</b>
+                  Precio: <b>${product.price}</b>
                 </li>
                 <li>
-                  Description:
+                  Descripción:
                   <div>{product.description}</div>
                 </li>
               </ul>
             </div>
             <div className="details-action">
               <ul>
-                <li>Price: {product.price}</li>
+                <li>Precio: {product.price}</li>
                 <li>
                   Status:{' '}
                   {product.countInStock > 0 ? 'In Stock' : 'Unavailable.'}
                 </li>
                 <li>
-                  Qty:{' '}
+                  Cantidad:{' '}
                   <select
                     value={qty}
                     onChange={(e) => {
@@ -109,7 +109,7 @@ function ProductScreen(props) {
                       onClick={handleAddToCart}
                       className="button primary"
                     >
-                      Add to Cart
+                      Agregar a carrito
                     </button>
                   )}
                 </li>
@@ -118,7 +118,7 @@ function ProductScreen(props) {
           </div>
           <div className="content-margined">
             <h2>Reviews</h2>
-            {!product.reviews.length && <div>There is no review</div>}
+            {!product.reviews.length && <div>No hay reviews</div>}
             <ul className="review" id="reviews">
               {product.reviews.map((review) => (
                 <li key={review._id}>
@@ -131,7 +131,7 @@ function ProductScreen(props) {
                 </li>
               ))}
               <li>
-                <h3>Write a customer review</h3>
+                <h3>Escribe una review</h3>
                 {userInfo ? (
                   <form onSubmit={submitHandler}>
                     <ul className="form-container">
@@ -143,15 +143,15 @@ function ProductScreen(props) {
                           value={rating}
                           onChange={(e) => setRating(e.target.value)}
                         >
-                          <option value="1">1- Poor</option>
-                          <option value="2">2- Fair</option>
-                          <option value="3">3- Good</option>
-                          <option value="4">4- Very Good</option>
-                          <option value="5">5- Excelent</option>
+                          <option value="1">1- Malo</option>
+                          <option value="2">2- Decente</option>
+                          <option value="3">3- Bueno</option>
+                          <option value="4">4- Muy bueno</option>
+                          <option value="5">5- Excelente</option>
                         </select>
                       </li>
                       <li>
-                        <label htmlFor="comment">Comment</label>
+                        <label htmlFor="comment">Comentario</label>
                         <textarea
                           name="comment"
                           value={comment}
@@ -167,7 +167,7 @@ function ProductScreen(props) {
                   </form>
                 ) : (
                   <div>
-                    Please <Link to="/signin">Sign-in</Link> to write a review.
+                    Porfavor <Link to="/signin">Sign-in</Link> Para escribir una review.
                   </div>
                 )}
               </li>

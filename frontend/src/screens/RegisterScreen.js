@@ -31,15 +31,15 @@ function RegisterScreen(props) {
     <form onSubmit={submitHandler} >
       <ul className="form-container">
         <li>
-          <h2>Create Account</h2>
+          <h2>Crear cuenta</h2>
         </li>
         <li>
-          {loading && <div>Loading...</div>}
+          {loading && <div>Cargando...</div>}
           {error && <div>{error}</div>}
         </li>
         <li>
           <label htmlFor="name">
-            Name
+            Nombre
           </label>
           <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
           </input>
@@ -52,21 +52,21 @@ function RegisterScreen(props) {
           </input>
         </li>
         <li>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Contraseña</label>
           <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
           </input>
         </li>
         <li>
-          <label htmlFor="rePassword">Re-Enter Password</label>
+          <label htmlFor="rePassword">Reingresar Contraseña</label>
           <input type="password" id="rePassword" name="rePassword" onChange={(e) => setRePassword(e.target.value)}>
           </input>
         </li>
         <li>
-          <button type="submit" className="button primary">Register</button>
+          <button type="submit" className="button primary">Registrar</button>
         </li>
         <li>
-          Already have an account?
-          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your amazona account</Link>
+          Ya tienes cuenta?
+          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Inicia sesión</Link>
 
         </li>
 

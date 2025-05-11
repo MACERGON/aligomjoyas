@@ -42,7 +42,7 @@ function PlaceOrderScreen(props) {
       <div className="placeorder-info">
         <div>
           <h3>
-            Shipping
+            Envio
           </h3>
           <div>
             {cart.shipping.address}, {cart.shipping.city},
@@ -50,25 +50,25 @@ function PlaceOrderScreen(props) {
           </div>
         </div>
         <div>
-          <h3>Payment</h3>
+          <h3>Pago</h3>
           <div>
-            Payment Method: {cart.payment.paymentMethod}
+            Metodo de pago: {cart.payment.paymentMethod}
           </div>
         </div>
         <div>
           <ul className="cart-list-container">
             <li>
               <h3>
-                Shopping Cart
+                Carrito
           </h3>
               <div>
-                Price
+                Precio
           </div>
             </li>
             {
               cartItems.length === 0 ?
                 <div>
-                  Cart is empty
+                  El carrito esta vacío
           </div>
                 :
                 cartItems.map(item =>
@@ -84,7 +84,7 @@ function PlaceOrderScreen(props) {
 
                       </div>
                       <div>
-                        Qty: {item.qty}
+                        Cantidad: {item.qty}
                       </div>
                     </div>
                     <div className="cart-price">
@@ -101,25 +101,25 @@ function PlaceOrderScreen(props) {
       <div className="placeorder-action">
         <ul>
           <li>
-            <button className="button primary full-width" onClick={placeOrderHandler} >Place Order</button>
+            <button className="button primary full-width" onClick={placeOrderHandler} >Hacer orden</button>
           </li>
           <li>
-            <h3>Order Summary</h3>
+            <h3>Resumen de orden</h3>
           </li>
           <li>
-            <div>Items</div>
+            <div>Articulos</div>
             <div>${itemsPrice}</div>
           </li>
           <li>
-            <div>Shipping</div>
+            <div>Envio</div>
             <div>${shippingPrice}</div>
           </li>
           <li>
-            <div>Tax</div>
+            <div>Impuesto</div>
             <div>${taxPrice}</div>
           </li>
           <li>
-            <div>Order Total</div>
+            <div>Total de la orden</div>
             <div>${totalPrice}</div>
           </li>
         </ul>
